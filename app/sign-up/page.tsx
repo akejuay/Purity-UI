@@ -2,12 +2,12 @@
 
 import Footer from "@/components/Layouts/Footer";
 import NavBar, { SignupNavBar } from "@/components/Layouts/NavBar";
-import { Button } from "@/components/ui/button";
-import { Toggle } from "@/components/ui/toggle";
 import Link from "next/link";
 import React, { useState } from "react";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
+import { Button } from "../src/shared/ui/button";
+import { Toggle } from "../src/shared/ui/toggle";
 
 export default function page() {
   const [name, setName] = useState("");

@@ -1,5 +1,5 @@
-import { Label } from "@/components/ui/label";
-import { Switch } from "@/components/ui/switch";
+import { Label } from "./label";
+import { Switch } from "./switch";
 
 export function Toggle() {
   return (

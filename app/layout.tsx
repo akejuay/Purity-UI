@@ -1,4 +1,4 @@
-import { AuthProvider } from "./Provider";
+import { AuthProvider } from "./src/shared/providers/Provider";
 import type { Metadata } from "next";
 // import { Geist, Geist_Mono } from "next/font/google";
 import { Be_Vietnam_Pro, Roboto } from "next/font/google";

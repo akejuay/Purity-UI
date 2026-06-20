@@ -2,14 +2,14 @@
 import React, { useState } from "react";
 import chakraLogo from "@/public/chakra-logo.png";
 import Image from "next/image";
-import { Toggle } from "../components/ui/toggle";
-import { Button } from "../components/ui/button";
 import Link from "next/link";
 import Footer from "../components/Layouts/Footer";
 import SigninNavBar from "../components/Layouts/NavBar";
 import { signIn } from "next-auth/react";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
+import { Toggle } from "./src/shared/ui/toggle";
+import { Button } from "./src/shared/ui/button";
 
 export default function Signin() {
   const [email, setEmail] = useState("");
