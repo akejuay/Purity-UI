@@ -5,6 +5,7 @@ import { Be_Vietnam_Pro, Roboto } from "next/font/google";
 import "./globals.css";
 import { Provider } from "@/components/ui/provider";
 import { Toaster } from "sonner";
+import Logo from "./src/shared/ui/Logo";
 
 const beVietnamPro = Be_Vietnam_Pro({
   weight: "400",
@@ -35,10 +36,9 @@ export default function RootLayout({
       className={`${roboto.variable} ${beVietnamPro.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <AuthProvider>
-          <main>{children}</main>
-          <Toaster />
-        </AuthProvider>
+        {/* <Logo /> */}
+        <main>{children}</main>
+        <Toaster />
       </body>
     </html>
   );

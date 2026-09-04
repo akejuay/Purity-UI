@@ -25,7 +25,7 @@ const footerLlink = [
 
 export default function Footer() {
   return (
-    <footer className="flex justify-between items-center max-w-6xl mx-auto mb-6">
+    <footer className="flex justify-between items-center mx-auto mb-6">
       <aside>
         <p className="text-gray-400 text-sm">
           @2026, Made with ❤️ by{" "}
