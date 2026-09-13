@@ -1,9 +1,10 @@
-import Signin from "./Sign-in";
+import { Index } from "./LandingPage";
 
 export default function page() {
   return (
     <div>
-      <Signin />
+      {/* <Signin /> */}
+      <Index />
     </div>
   );
 }

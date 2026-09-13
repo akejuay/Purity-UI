@@ -10,10 +10,10 @@ import Transactions from "../src/widgets/BillingUI/Transactions";
 export default function page() {
   return (
     <main className="p-6 flex flex-row">
-      <div className="w-[18%]">
+      {/* <div className="w-[18%]">
         <Sidebar />
-      </div>
-      <div className="w-[82%] px-8">
+      </div> */}
+      <div className=" px-8">
         <DashboardNavBar pageTitle="Billings" />
         <div className="flex mt-6 gap-6 mb-16">
           <div className="w-[70%]">

@@ -1,13 +1,11 @@
-import { AuthProvider } from "./src/shared/providers/Provider";
 import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
 import { Be_Vietnam_Pro, Roboto } from "next/font/google";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import "./globals.css";
+import "../globals.css";
 import { Provider } from "@/components/ui/provider";
 import { Toaster } from "sonner";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { AppSidebar } from "./src/shared/ui/Appsidebar";
+import { AppSidebar } from "../src/shared/ui/Appsidebar";
 
 const beVietnamPro = Be_Vietnam_Pro({
   weight: "400",
@@ -38,8 +36,8 @@ export default function RootLayout({
       className={`${roboto.variable} ${beVietnamPro.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        {/* <TooltipProvider>
-          
+        <TooltipProvider>
+          {/* <Logo /> */}
           <SidebarProvider>
             <AppSidebar />
             <main>
@@ -48,8 +46,7 @@ export default function RootLayout({
             </main>
           </SidebarProvider>
           <Toaster />
-        </TooltipProvider> */}
-        {children}
+        </TooltipProvider>
       </body>
     </html>
   );

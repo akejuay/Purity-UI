@@ -9,10 +9,10 @@ import ProfileProject from "../src/widgets/ProfileUI/ProfileProject";
 export default function page() {
   return (
     <main className="p-6 flex flex-row">
-      <div className="w-[18%]">
+      {/* <div className="w-[18%]">
         <Sidebar />
-      </div>
-      <div className="w-[82%] px-8">
+      </div> */}
+      <div className=" px-8">
         <div className="navbar bg-cover bg-no-repeat bg-center h-64 rounded-2xl p-4">
           <Navbar />
         </div>
