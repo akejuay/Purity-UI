@@ -1,11 +1,10 @@
-import React from "react";
-import Sidebar from "../src/shared/ui/Sidebar";
-import DashboardNavBar from "../src/shared/ui/DashboardNavBar";
-import AtmCard from "../src/widgets/BillingUI/AtmCard";
-import InvoiceTable from "../src/widgets/BillingUI/InvoiceTable";
-import BillingInfo from "../src/widgets/BillingUI/BillingInfo";
+import DashboardNavBar from "@/app/src/shared/ui/DashboardNavBar";
+import AtmCard from "@/app/src/widgets/BillingUI/AtmCard";
+import BillingInfo from "@/app/src/widgets/BillingUI/BillingInfo";
+import InvoiceTable from "@/app/src/widgets/BillingUI/InvoiceTable";
+import Transactions from "@/app/src/widgets/BillingUI/Transactions";
 import Footer from "@/components/Layouts/Footer";
-import Transactions from "../src/widgets/BillingUI/Transactions";
+import React from "react";
 
 export default function page() {
   return (

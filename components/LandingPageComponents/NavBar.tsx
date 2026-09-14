@@ -93,13 +93,17 @@ export function Navbar() {
               </li>
             ))}
           </ul>
-          <div className="mt-5 flex gap-3">
-            <button className="flex-1 rounded-full border border-border px-4 py-2.5 text-sm font-semibold text-foreground">
-              Log in
-            </button>
-            <button className="flex-1 rounded-full bg-accent px-4 py-2.5 text-sm font-semibold text-accent-foreground">
-              Sign up
-            </button>
+          <div className="mt-5 f<lex gap-3">
+            <Link href={"sign-in"}>
+              <button className="flex-1 rounded-full border border-border px-4 py-2.5 text-sm font-semibold text-foreground">
+                Log in
+              </button>
+            </Link>
+            <Link href={"sign-up"}>
+              <button className="flex-1 rounded-full bg-accent px-4 py-2.5 text-sm font-semibold text-accent-foreground">
+                Sign up
+              </button>
+            </Link>
           </div>
         </div>
       )}

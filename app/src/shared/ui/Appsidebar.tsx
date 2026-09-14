@@ -142,6 +142,7 @@ export function AppSidebar() {
             <SidebarMenuButton asChild tooltip="Logout">
               <button
                 type="button"
+                className="bg-red-500 hover:bg-red-600 py-3 cursor-pointer"
                 onClick={() => signOut({ callbackUrl: "/" })}
               >
                 <LogOut />

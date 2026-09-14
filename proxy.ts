@@ -1,33 +1,38 @@
-// export {default} from "next-auth/middleware"
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
+import { getToken } from "next-auth/jwt";
 
-// export const config = {matcher: ["/dashboard"]}
+export async function proxy(request: NextRequest) {
+  const token = await getToken({
+    req: request,
+    secret: process.env.NEXTAUTH_SECRET,
+  });
 
-// export { default } from "next-auth/middleware";
+  if (!token) {
+    const loginUrl = new URL("/", request.url);
 
-// export const middleware = {
-//   matcher: [
-//     "/dashboard/:path*",
-//     "/profile/:path*",
-//     "/billing/:path*",
-//     "/tables/:path*",
-//     "/rtl/:path*",
-//   ],
-// };
+    loginUrl.searchParams.set(
+      "callbackUrl",
+      request.nextUrl.pathname
+    );
 
-import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
- 
-// This function can be marked `async` if using `await` inside
-export function proxy(request: NextRequest) {
-  return NextResponse.redirect(new URL('/home', request.url))
+    return NextResponse.redirect(loginUrl);
+  }
+
+  return NextResponse.next();
 }
- 
+
 export const config = {
-    matcher: [
+  matcher: [
+    "/dashboard",
     "/dashboard/:path*",
+    "/profile",
     "/profile/:path*",
+    "/billing",
     "/billing/:path*",
+    "/tables",
     "/tables/:path*",
+    "/rtl",
     "/rtl/:path*",
   ],
-}
+};
